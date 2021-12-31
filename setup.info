@@ -1,0 +1,27 @@
+# project setup information
+
+1. npm i install
+    - This will create files package.json, package-lock.json and node_modules folder.
+      node_modules folder contains all npm dependencies required by node for the project
+      
+2. npm init -y
+3. npm i react react-dom
+4. npm i webpack webpack-cli
+5. npm i express
+6. npm i babel-loader @babel/core @babel/node @babel/preset-env @babel/preset-react
+
+# Development dependencies
+7. npm i -D eslint babel-eslint eslint-plugin-react eslint-plugin-react-hooks
+#8. npm i -D nodemon
+
+# configure server start commands in package.json
+Add below scripts block to package.json file IF NOT ALREADY ADDED
+ "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-server": "babel-node src/server/server.js --ignore dist/",
+    "dev-bundler": "webpack -w --mode=development"
+  }
+
+# run below commands from two different terminals in parallel
+  npm run dev-server
+  npm run dev-bundler
